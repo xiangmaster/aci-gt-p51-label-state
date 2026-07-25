@@ -1,0 +1,15 @@
+name: Ground Truth P51-E03
+on:
+  issues:
+    types: [opened]
+permissions:
+  issues: write
+jobs:
+  fixture:
+    runs-on: ubuntu-latest
+    if: ${{ false }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      AGENT_OUTPUT: ground-truth-agent-output
+    steps:
+      - run: gh issue edit "${{ github.event.issue.number }}" --add-label agent-output-ready
