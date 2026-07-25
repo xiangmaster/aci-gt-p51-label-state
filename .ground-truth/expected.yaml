@@ -1,0 +1,10 @@
+id: P51-E03
+repository: aci-gt-p51-label-state
+visibility: public
+stage: P5
+rule: P5.1
+kind: experiment
+atomic_variable: "写 label/state"
+expected_status: REACHABLE
+setup: AUTO_FILES
+configuration_state: COMPLETE
